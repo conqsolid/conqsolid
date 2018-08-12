@@ -1,6 +1,5 @@
-FROM microsoft/dotnet:2.1 AS build
+FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /app
- 
  
 COPY *.csproj ./
 RUN dotnet restore
@@ -9,8 +8,8 @@ RUN dotnet restore
 COPY . ./
 RUN dotnet publish -c Release -o output
  
- 
-FROM microsoft/dotnet:2.1
+
+FROM microsoft/dotnet:2.1-sdk
 WORKDIR /app
 COPY --from=build /app/output .
  
