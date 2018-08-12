@@ -1,4 +1,4 @@
-FROM microsoft/aspnetcore-build:2.1 AS build
+FROM microsoft/dotnet:2.1 AS build
 WORKDIR /app
  
  
@@ -10,7 +10,7 @@ COPY . ./
 RUN dotnet publish -c Release -o output
  
  
-FROM microsoft/aspnetcore:2.1
+FROM microsoft/dotnet:2.1
 WORKDIR /app
 COPY --from=build /app/output .
  
