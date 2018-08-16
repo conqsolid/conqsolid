@@ -13,6 +13,7 @@
 *.userprefs
 
 # Build results
+*.dll
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -23,6 +24,8 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
+[Pp]ublish/
+output
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/

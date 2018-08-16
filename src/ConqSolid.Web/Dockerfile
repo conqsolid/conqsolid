@@ -1,7 +1,7 @@
 FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /app
  
-COPY src/ConqSolid.Web/*.csproj ./
+COPY *.csproj ./
 RUN dotnet restore
  
  
@@ -17,4 +17,4 @@ EXPOSE 5000
 ENV ASPNETCORE_URLS http://*:5000
 ENV ASPNETCORE_ENVIRONMENT docker
  
-ENTRYPOINT ["dotnet", "ConqSolid-web.dll"]
+ENTRYPOINT ["dotnet", "ConqSolid-Web.dll"]
