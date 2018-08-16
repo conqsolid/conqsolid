@@ -17,4 +17,4 @@ EXPOSE 5000
 ENV ASPNETCORE_URLS http://*:5000
 ENV ASPNETCORE_ENVIRONMENT docker
  
-ENTRYPOINT ["dotnet", "ConqSolid-Web.dll"]
+ENTRYPOINT ["dotnet", "ConqSolid.Web.dll"]
