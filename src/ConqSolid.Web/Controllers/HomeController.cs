@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using conqsolid.Models;
+using ConqSolid.Web.Models;
 
-namespace conqsolid.Controllers
+namespace ConqSolid.Web.Controllers
 {
     public class HomeController : Controller
     {

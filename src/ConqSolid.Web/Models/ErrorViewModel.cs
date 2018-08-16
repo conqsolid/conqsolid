@@ -1,6 +1,6 @@
 using System;
 
-namespace conqsolid.Models
+namespace ConqSolid.Web.Models
 {
     public class ErrorViewModel
     {
