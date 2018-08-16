@@ -6,22 +6,17 @@ using System.Threading.Tasks;
 using Xunit;
 
 public class HomePageShould : IClassFixture<WebApplicationFactory<Startup>>
+{
+    private readonly HttpClient _client;
+    public HomePageShould(WebApplicationFactory<Startup> factory)
     {
-        private readonly HttpClient _client;
-        public HomePageShould(WebApplicationFactory<Startup> factory)
-        {
-            _client = factory.CreateClient();
-        }
-        [Fact]
-        public async Task ReturnHttpStatusCodeOk()
-        {
-            var response = await _client.GetAsync("/");
-            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-        }
-
-        [Fact]
-        public void CalculatorResultMustBeTrue()
-        {
-            Assert.Equal(3*3, 9);
-        }
+        _client = factory.CreateClient();
     }
+    [Fact]
+    public async Task ReturnHttpStatusCodeOk()
+    {
+        var response = await _client.GetAsync("/");
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+    }
+
+}

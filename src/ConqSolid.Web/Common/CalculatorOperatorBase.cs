@@ -4,8 +4,9 @@ namespace ConqSolid.Web.Common
     {
         public int LeftVal { get; set; }
         public int RightVal { get; set; }
+        public int Result {get; protected set;}
         public CalculatorOperatorTypeEnum CalculatorOperatorTypeEnum { get; set; }
-        public abstract int Calculate();
+        public abstract void Calculate();
 
         public CalculatorOperatorBase(int leftVal, int rightVal)
         {

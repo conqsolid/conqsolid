@@ -7,9 +7,9 @@ namespace ConqSolid.Web.Common
             this.CalculatorOperatorTypeEnum = CalculatorOperatorTypeEnum.Adder;
         }
 
-        public override int Calculate()
+        public override void Calculate()
         {
-            return this.LeftVal + this.RightVal;
+            this.Result = this.LeftVal + this.RightVal;
         }
     }
 }
