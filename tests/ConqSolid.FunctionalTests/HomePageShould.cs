@@ -16,6 +16,6 @@ public class HomePageShould : IClassFixture<WebApplicationFactory<Startup>>
         public async Task ReturnHttpStatusCodeOk()
         {
             var response = await _client.GetAsync("/");
-            Assert.Equal(HttpStatusCode.Accepted, response.StatusCode);
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         }
     }
