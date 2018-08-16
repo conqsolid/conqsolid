@@ -1,4 +1,4 @@
-namespace ConqSolid.Web.Common
+namespace ConqSolid.Common
 {
     public class Adder : CalculatorOperatorBase
     {
