@@ -18,7 +18,7 @@ namespace ConqSolid.FunctionalTests
         {
             Substracter theSubstracter = new Substracter(100,10);
             theSubstracter.Calculate();
-            Assert.Equal(85, theSubstracter.Result);
+            Assert.Equal(90, theSubstracter.Result);
         }
     }
 }
