@@ -32,7 +32,6 @@ namespace ConqSolid.Web.Controllers
                 default:
                 {
                     return BadRequest("Invalid CalculatorOperatorType");
-                    break;
                 }
             }
 
