@@ -1,4 +1,4 @@
-using ConqSolid.Web.Common;
+using ConqSolid.Common;
 using Xunit;
 
 namespace ConqSolid.FunctionalTests
