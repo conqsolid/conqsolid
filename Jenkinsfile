@@ -11,5 +11,10 @@ pipeline {
         sh 'dotnet test tests/ConqSolid.FunctionalTests/ConqSolid.FunctionalTests.csproj'
       }
     }
+    stage('change directory') {
+      steps {
+        sh 'cd src/ConqSolid.Web'
+      }
+    }
   }
 }
