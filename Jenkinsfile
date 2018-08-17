@@ -18,7 +18,7 @@ pipeline {
     }
     stage('compose down') {
       steps {
-        sh 'sudo docker-compose down -f src/docker-compose.yml'
+        sh 'sudo docker-compose -f src/ConqSolid.Web/docker-compose.yml down'
       }
     }
   }
