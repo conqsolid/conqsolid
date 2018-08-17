@@ -11,6 +11,14 @@ pipeline {
         sh 'dotnet test tests/ConqSolid.FunctionalTests/ConqSolid.FunctionalTests.csproj'
       }
     }
+<<<<<<< HEAD
+=======
+    stage('change directory') {
+      steps {
+        dir(path: 'src/ConqSolid.Web')
+      }
+    }
+>>>>>>> e1ac8b13682d26785bfdb1a3bccbe0cd4d22777b
     stage('docker') {
       steps {
         dir 'src/ConqSolid.Web'{
