@@ -13,12 +13,14 @@ pipeline {
     }
     stage('change directory') {
       steps {
-        sh 'cd src/ConqSolid.Web'
+        dir 'src/ConqSolid.Web'
       }
     }
-    stage('compose down') {
+    stage('docker') {
       steps {
-        sh 'sudo docker-compose -f src/ConqSolid.Web/docker-compose.yml down'
+        sh 'sudo docker-compose -f down'
+        sh 'sudo docker build -t conqsolid .'
+        sh 'sudo docker-compose up'
       }
     }
   }
