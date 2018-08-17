@@ -13,7 +13,7 @@ pipeline {
     }
     stage('change directory') {
       steps {
-        dir 'src/ConqSolid.Web'
+        dir(path: 'src/ConqSolid.Web')
       }
     }
     stage('docker') {
