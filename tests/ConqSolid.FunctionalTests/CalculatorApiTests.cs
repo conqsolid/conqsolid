@@ -18,6 +18,7 @@ public class CalculatorApiTests : IClassFixture<WebApplicationFactory<Startup>>
     {
         _client = factory.CreateClient();
     }
+    
     [Fact]
     public async Task AdderMustAdd()
     {
