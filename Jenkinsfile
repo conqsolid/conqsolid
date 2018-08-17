@@ -14,9 +14,9 @@ pipeline {
     stage('docker') {
       steps {
         dir 'src/ConqSolid.Web'{
-          sh 'sudo docker-compose -f down'
-          sh 'sudo docker build -t conqsolid .'
-          sh 'sudo docker-compose up'
+          sh ('sudo docker-compose -f down')
+          sh ('sudo docker build -t conqsolid .')
+          sh ('sudo docker-compose up')
         }
       }
     }
