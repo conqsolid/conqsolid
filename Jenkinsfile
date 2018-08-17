@@ -16,5 +16,10 @@ pipeline {
         sh 'cd src/ConqSolid.Web'
       }
     }
+    stage('compose down') {
+      steps {
+        sh 'sudo docker-compose down'
+      }
+    }
   }
 }
