@@ -11,12 +11,13 @@ pipeline {
         sh 'dotnet test tests/ConqSolid.FunctionalTests/ConqSolid.FunctionalTests.csproj'
       }
     }
-    stage('change directory') {
+    stage('docker') {
       steps {
-        dir 'src/ConqSolid.Web'
-        sh 'sudo docker-compose -f down'
-        sh 'sudo docker build -t conqsolid .'
-        sh 'sudo docker-compose up'
+        dir 'src/ConqSolid.Web'{
+          sh 'sudo docker-compose -f down'
+          sh 'sudo docker build -t conqsolid .'
+          sh 'sudo docker-compose up'
+        }
       }
     }
   }
