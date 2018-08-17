@@ -29,6 +29,16 @@ namespace ConqSolid.Web.Controllers
                     calculator = new Substracter(calculatorRequest.LeftVal, calculatorRequest.RightVal);
                     break;
                 }
+                case CalculatorOperatorTypeEnum.Multiplier:
+                {
+                    calculator = new Multiplier(calculatorRequest.LeftVal, calculatorRequest.RightVal);
+                    break;
+                }
+                case CalculatorOperatorTypeEnum.Divider:
+                {
+                    calculator = new Divider(calculatorRequest.LeftVal, calculatorRequest.RightVal);
+                    break;
+                }
                 default:
                 {
                     return BadRequest("Invalid CalculatorOperatorType");
@@ -36,7 +46,13 @@ namespace ConqSolid.Web.Controllers
             }
 
             calculator.Calculate();
-            return Ok(calculator.Result);
+
+            var calculatorResponse = new CalculatorResponse
+            {
+                Result = calculator.Result
+            };
+
+            return Ok(calculatorResponse);
         }
     }
 }

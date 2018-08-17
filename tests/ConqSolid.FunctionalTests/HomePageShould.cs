@@ -4,6 +4,11 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
+using ConqSolid.MessageTypes;
+using ConqSolid.Common;
+using Newtonsoft.Json;
+using System.Net.Http.Headers;
+using Moq;
 
 public class HomePageShould : IClassFixture<WebApplicationFactory<Startup>>
 {
@@ -18,5 +23,4 @@ public class HomePageShould : IClassFixture<WebApplicationFactory<Startup>>
         var response = await _client.GetAsync("/");
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
     }
-
 }
