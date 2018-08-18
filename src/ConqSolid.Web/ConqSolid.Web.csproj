@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
-  </ItemGroup>
+      <Watch Include="**\*.cshtml" Exclude="**\Debug\*.cshtml" />
+      <Watch Include="**\*.cs" Exclude="**\Debug\*.cs" />
+</ItemGroup>
 
 </Project>
